@@ -1,6 +1,20 @@
 name: Accessibility-alt-text-bot
-on: push
+on: 
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  discussion:
+    types: [created, edited]
+  discussion_comment:
+    types: [created, edited]
 
+permissions:
+  issues: write
+  pull-requests: write
+  discussions: write
   
 jobs:
   accessibility_alt_text_bot:
